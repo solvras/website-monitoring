@@ -1,0 +1,15 @@
+{% extends "_layouts/cp" %}
+{% set title = "Create token"|t('website-monitoring') %}
+
+{% block content %}
+    {% set message = craft.app.session.getFlash('tokenCreated') %}
+	{% if message|length > 0 %}
+	    <p>{{ message }}</p>
+	{% endif %}
+
+	<form method="post" accept-charset="UTF-8">
+    	{{ csrfInput() }}
+    	{{ actionInput('/website-monitoring/api/create-token') }}
+    	<button type="submit" class="btn submit">Create token</button>
+    </form>
+{% endblock %}
