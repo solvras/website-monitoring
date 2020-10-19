@@ -1,0 +1,41 @@
+{
+    "name": "solvras/website-monitoring",
+    "description": "Plugin to monitor pending updates on websites",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "website monitoring"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kalle Pohjapelto",
+            "homepage": "https://solvr.no"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "solvras\\websitemonitoring\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Website monitoring",
+        "handle": "website-monitoring",
+        "developer": "Kalle Pohjapelto",
+        "developerUrl": "https://solvr.no",
+        "documentationUrl": "???",
+        "changelogUrl": "???",
+        "class": "solvras\\websitemonitoring\\WebsiteMonitoring"
+    }
+}
