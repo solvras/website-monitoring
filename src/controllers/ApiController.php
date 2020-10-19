@@ -47,7 +47,7 @@ class ApiController extends Controller
         $currentTime = DateTimeHelper::currentUTCDateTime();
         $expiryDate = $currentTime->add(new \DateInterval('P10Y'));
 
-        $token = Craft::$app->tokens->createToken('/website-monitoring/api/auth', null, $expiryDate);
+        $token = Craft::$app->tokens->createToken('/website-monitoring/api/info', null, $expiryDate);
 
         Craft::$app->session->setFlash('tokenCreated', "Token created: ".$token);
         Craft::$app->session->setNotice("Token created");
