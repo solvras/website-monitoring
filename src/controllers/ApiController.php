@@ -42,7 +42,7 @@ class ApiController extends Controller
      */
     public function actionCreateToken()
     {
-        $this->requireAdmin();
+        $this->requireAdmin(false);
         
         $currentTime = DateTimeHelper::currentUTCDateTime();
         $expiryDate = $currentTime->add(new \DateInterval('P10Y'));

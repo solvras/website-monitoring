@@ -10,10 +10,6 @@
         "craft-plugin",
         "website monitoring"
     ],
-    "support": {
-        "docs": "???",
-        "issues": "???"
-    },
     "license": "MIT",
     "authors": [
         {
