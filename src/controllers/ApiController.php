@@ -15,6 +15,7 @@ use solvras\websitemonitoring\WebsiteMonitoring;
 use Craft;
 use craft\web\Controller;
 use craft\helpers\DateTimeHelper;
+use yii\web\ForbiddenHttpException;
 
 /**
  * @author    Kalle Pohjapelto
@@ -32,10 +33,20 @@ class ApiController extends Controller
      *         The actions must be in 'kebab-case'
      * @access protected
      */
-    protected $allowAnonymous = ['info', 'updates'];
+    protected $allowAnonymous = ['info'];
 
     // Public Methods
     // =========================================================================
+
+    public function beforeAction($action): bool
+    {
+        // Disable CSRF validation POST requests
+        if ($action->id === 'info') {
+            $this->enableCsrfValidation = false;
+        }
+
+        return parent::beforeAction($action);
+    }
 
      /**
      * @return mixed
@@ -59,7 +70,12 @@ class ApiController extends Controller
      * @return mixed
      */
     public function actionInfo()
-    {
+    {   
+        if($_SERVER['REMOTE_ADDR'] !== Craft::parseEnv('$MONITOR_TRUSTED_HOST')) {
+            throw new ForbiddenHttpException();
+        }
+
+        $this->requirePostRequest();
         $this->requireToken();
 
         $result = [
@@ -76,18 +92,6 @@ class ApiController extends Controller
             ],
             'updates' => Craft::$app->api->getUpdates()
         ];
-
-        return $this->asJson($result);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function actionUpdates()
-    {
-        $this->requireToken();
-
-        $result = Craft::$app->api->getUpdates();
 
         return $this->asJson($result);
     }
