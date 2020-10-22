@@ -79,16 +79,4 @@ class ApiController extends Controller
 
         return $this->asJson($result);
     }
-
-    /**
-     * @return mixed
-     */
-    public function actionUpdates()
-    {
-        $this->requireToken();
-
-        $result = Craft::$app->api->getUpdates();
-
-        return $this->asJson($result);
-    }
 }
