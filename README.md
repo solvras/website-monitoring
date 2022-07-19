@@ -1,4 +1,4 @@
-# Website monitoring plugin for Craft CMS 3.x
+# Website monitoring plugin for Craft CMS 4.x
 
 Plugin to monitor pending updates on websites
 
@@ -6,7 +6,7 @@ Plugin to monitor pending updates on websites
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
+This plugin requires Craft CMS 4.0.0-alpha or later.
 
 ## Installation
 
