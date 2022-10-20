@@ -13,7 +13,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Kalle Pohjapelto",
+            "name": "Solvr",
             "homepage": "https://solvr.no"
         }
     ],
@@ -28,7 +28,7 @@
     "extra": {
         "name": "Website monitoring",
         "handle": "website-monitoring",
-        "developer": "Kalle Pohjapelto",
+        "developer": "Solvr",
         "developerUrl": "https://solvr.no",
         "documentationUrl": "???",
         "changelogUrl": "???",

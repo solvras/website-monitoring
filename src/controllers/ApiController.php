@@ -5,7 +5,7 @@
  * Plugin to monitor pending updates on websites
  *
  * @link      https://solvr.no
- * @copyright Copyright (c) 2020 Kalle Pohjapelto
+ * @copyright Copyright (c) 2020 Solvr
  */
 
 namespace solvras\websitemonitoring\controllers;
@@ -18,7 +18,7 @@ use craft\helpers\DateTimeHelper;
 use yii\web\ForbiddenHttpException;
 
 /**
- * @author    Kalle Pohjapelto
+ * @author    Solvr
  * @package   WebsiteMonitoring
  * @since     1.0.0
  */

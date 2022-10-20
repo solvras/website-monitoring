@@ -40,4 +40,4 @@ Some things to do, and ideas for potential features:
 
 * Release it
 
-Brought to you by [Kalle Pohjapelto](https://solvr.no)
+Brought to you by [Solvr](https://solvr.no)
