@@ -71,7 +71,7 @@ class ApiController extends Controller
      */
     public function actionInfo()
     {   
-        if($_SERVER['REMOTE_ADDR'] !== Craft::parseEnv('$MONITOR_TRUSTED_HOST')) {
+        if($_SERVER['REMOTE_ADDR'] !== craft\helpers\App::env('MONITOR_TRUSTED_HOST')) {
             throw new ForbiddenHttpException();
         }
 
